@@ -1,0 +1,18 @@
+# User-specific files
+*.suo
+*.user
+.vs
+_ReSharper*/
+*.csproj.ReSharper
+
+# Build output
+build/
+bin/
+obj/
+
+# Unit test scratch file (for DictionaryAdapter tests) and test runner results
+/out.xml
+/NetCoreClrTestResults.xml
+/DesktopClrTestResults.xml
+/DesktopClrWeakNamedTestResults.xml
+/NetCoreClrWeakNamedTestResults.xml
