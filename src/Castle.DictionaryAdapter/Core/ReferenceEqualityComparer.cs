@@ -22,7 +22,7 @@ namespace Castle.Core
 #if FEATURE_SERIALIZATION
 	[Serializable]
 #endif
-	public class ReferenceEqualityComparer<T> : IEqualityComparer, IEqualityComparer<T>
+	internal class ReferenceEqualityComparer<T> : IEqualityComparer, IEqualityComparer<T>
 	{
 		private static readonly ReferenceEqualityComparer<T> instance = new ReferenceEqualityComparer<T>();
 

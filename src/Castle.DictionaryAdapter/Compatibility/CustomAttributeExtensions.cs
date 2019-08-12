@@ -27,30 +27,12 @@ namespace System.Reflection
 	// from https://github.com/dotnet/corefx/blob/master/src/System.Reflection.Extensions/ref/System.Reflection.Extensions.cs
 	internal static class CustomAttributeExtensions
 	{
-		public static IEnumerable<T> GetCustomAttributes<T>(this Assembly element) where T : Attribute
-		{
-			foreach (T a in Attribute.GetCustomAttributes(element, typeof(T)))
-			{
-				yield return a;
-			}
-		}
-
 		public static IEnumerable<T> GetCustomAttributes<T>(this MemberInfo element, bool inherit) where T : Attribute
 		{
 			foreach (T a in Attribute.GetCustomAttributes(element, typeof(T), inherit))
 			{
 				yield return a;
 			}
-		}
-
-		public static bool IsDefined(this MemberInfo element, Type attributeType)
-		{
-			return Attribute.IsDefined(element, attributeType);
-		}
-
-		public static bool IsDefined(this ParameterInfo element, Type attributeType)
-		{
-			return Attribute.IsDefined(element, attributeType);
 		}
 	}
 }

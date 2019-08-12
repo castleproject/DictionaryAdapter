@@ -23,7 +23,7 @@ namespace Castle.Core.Internal
 	/// <summary>
 	///   Helper class for retrieving attributes.
 	/// </summary>
-	public static class AttributesUtil
+	internal static class AttributesUtil
 	{
 		/// <summary>
 		/// Gets the attribute.
