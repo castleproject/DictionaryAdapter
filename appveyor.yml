@@ -56,22 +56,17 @@ for:
   - ps: |
       $wc = New-Object System.Net.WebClient
       $wc.UploadFile("https://ci.appveyor.com/api/testresults/nunit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path "NetCoreClrTestResults.xml"))
-      $wc.UploadFile("https://ci.appveyor.com/api/testresults/nunit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path "NetCoreClrWeakNamedTestResults.xml"))
       $wc.UploadFile("https://ci.appveyor.com/api/testresults/nunit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path "DesktopClrTestResults.xml"))
-      $wc.UploadFile("https://ci.appveyor.com/api/testresults/nunit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path "DesktopClrWeakNamedTestResults.xml"))
 
   # push packages to NuGet on tag builds
   on_success:
   - ps: |
       if ($env:APPVEYOR_REPO_TAG -eq "true")
       {
-          nuget push ".\build\Castle.Core.${env:APPVEYOR_BUILD_VERSION}.nupkg" -ApiKey $env:NUGET_API_KEY -Source https://api.nuget.org/v3/index.json
-          nuget push ".\build\Castle.Core-log4net.${env:APPVEYOR_BUILD_VERSION}.nupkg" -ApiKey $env:NUGET_API_KEY -Source https://api.nuget.org/v3/index.json
-          nuget push ".\build\Castle.Core-NLog.${env:APPVEYOR_BUILD_VERSION}.nupkg" -ApiKey $env:NUGET_API_KEY -Source https://api.nuget.org/v3/index.json
-          nuget push ".\build\Castle.Core-Serilog.${env:APPVEYOR_BUILD_VERSION}.nupkg" -ApiKey $env:NUGET_API_KEY -Source https://api.nuget.org/v3/index.json
+          nuget push ".\build\Castle.DictionaryAdapter.${env:APPVEYOR_BUILD_VERSION}.nupkg" -ApiKey $env:NUGET_API_KEY -Source https://api.nuget.org/v3/index.json
       }
 
   # upload packages to AppVeyor
   artifacts:
   - path: build\*.nupkg
-    name: core
+    name: dictionaryadapter
