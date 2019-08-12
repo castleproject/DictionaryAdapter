@@ -1,22 +1,22 @@
-# Castle Core
+# Castle DictionaryAdapter
 
 <img align="right" src="docs/images/castle-logo.png">
 
-Castle Core provides common Castle Project abstractions including logging services. It also features **Castle DynamicProxy** a lightweight runtime proxy generator, and **Castle DictionaryAdapter**.
+Castle DictionaryAdapter on the fly generates strongly-typed wrappers around untyped dictionaries, or chunks of XML (like config file), optionally adding support for change notification, cancelation, error notification and other features.
 
 See the [documentation](docs/README.md).
 
 ## Releases
 
-[![NuGet](https://img.shields.io/nuget/v/Castle.Core.svg)](https://www.nuget.org/packages/Castle.Core/)
+[![NuGet](https://img.shields.io/nuget/v/Castle.DictionaryAdapter.svg)](https://www.nuget.org/packages/Castle.DictionaryAdapter/)
 
-See the [Releases](https://github.com/castleproject/Core/releases).
+See the [Releases](https://github.com/castleproject/DictionaryAdapter/releases).
 
-Debugging symbols are available in symbol packages in the AppVeyor build artifacts since version 4.1.0. For example, [here are the artifacts for 4.1.0](https://ci.appveyor.com/project/castleproject/core/build/4.1.0/artifacts).
+Debugging symbols are available in symbol packages in the AppVeyor build artifacts since version 4.1.0. :construction:
 
 ## License
 
-Castle Core is &copy; 2004-2019 Castle Project. It is free software, and may be redistributed under the terms of the [Apache 2.0](http://opensource.org/licenses/Apache-2.0) license.
+Castle DictionaryAdapter is &copy; 2004-2019 Castle Project. It is free software, and may be redistributed under the terms of the [Apache 2.0](http://opensource.org/licenses/Apache-2.0) license.
 
 ## Contributing
 
@@ -24,10 +24,9 @@ Browse the [contributing section](https://github.com/castleproject/Home#its-comm
 
 ## Building
 
-| Platform | Build Status | NuGet Feed |
-|----------|-------------:|------------|
-| Windows  | [![Build status](https://ci.appveyor.com/api/projects/status/49a6i0ydiku56r5b/branch/master?svg=true)](https://ci.appveyor.com/project/castleproject/core/branch/master) | [Preview Feed](https://ci.appveyor.com/nuget/core-0mhe40ifodk8)
-| Linux    | [![Build Status](https://api.travis-ci.com/castleproject/Core.svg?branch=master)](https://travis-ci.com/castleproject/Core/branches) |  |
+| Platforms       | Build Status   | NuGet Feed     |
+|-----------------|----------------|----------------|
+| Windows & Linux | :construction: | :construction: |
 
 ### On Windows
 
